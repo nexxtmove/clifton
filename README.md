@@ -22,4 +22,5 @@ bus.receive('letter', (message) => {
 })
 ```
 
-<img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.png" width="150" alt="Pat Clifton"/>
+<br>
+<img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.png" width="75" alt="Pat Clifton"/>

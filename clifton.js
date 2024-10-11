@@ -57,20 +57,25 @@ export class Bus {
   deliver(subject, message = null) {
     const iframes = window.document.querySelectorAll('iframe')
 
+    const bus = this.name
+    const data = {
+      _clifton: { bus, subject },
+      message
+    }
+
+    const json = JSON.stringify(data)
+
+    if (window.parent) {
+      window.parent.postMessage(json, '*')
+    }
+
     for (const iframe of iframes) {
       try {
         if (!iframe.contentWindow) {
           continue
         }
 
-        const bus = this.name
-
-        const data = {
-          _clifton: { bus, subject },
-          message
-        }
-
-        iframe.contentWindow.postMessage(JSON.stringify(data), '*')
+        iframe.contentWindow.postMessage(json, '*')
       } catch {
         continue
       }
