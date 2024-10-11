@@ -1,4 +1,4 @@
-# 📬 Clifton
+# <img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.png" height="40" alt="Pat Clifton"/> Clifton
 
 Cross-origin message delivery
 
@@ -21,5 +21,3 @@ bus.receive('letter', (message) => {
   alert(`Hi ${message.name}!`)
 })
 ```
-
-![Pat Clifton](https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.png)
