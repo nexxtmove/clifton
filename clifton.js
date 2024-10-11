@@ -1,11 +1,8 @@
 export class Bus {
-  name
-  handler
-  recipients = {}
-
   constructor(name) {
     this.name = name
     this.handler = this.handleMessageEvent.bind(this)
+    this.recipients = {}
 
     this.start()
   }
