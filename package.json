@@ -1,6 +1,6 @@
 {
   "name": "clifton",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Cross-origin message bus",
   "license": "MIT",
   "main": "clifton.js"
