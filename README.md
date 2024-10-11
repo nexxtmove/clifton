@@ -1,6 +1,6 @@
 # 📬 Clifton
 
-Cross-origin message delivery
+Easy-to-use messaging between iframes and their parent.
 
 ## Install
 
@@ -10,17 +10,38 @@ npm install clifton
 
 ## Usage
 
+Create a `Bus` with the same name on all your pages and start sending messages to each other:
+
+<table>
+<tr>
+<td>parent.html</td>
+<td>iframe.html</td>
+</tr>
+<tr>
+<td>
+
 ```js
 import { Bus } from 'clifton'
 
-const bus = new Bus('pat')
+const bus = new Bus('letters')
 
-bus.deliver('letter', { name: 'Pat' })
-
-bus.receive('letter', (message) => {
-  alert(`Hi ${message.name}!`)
-})
+bus.deliver('letter', { name: 'Pat Clifton' })
 ```
+
+</td>
+<td>
+    
+```js
+import { Bus } from 'clifton'
+
+const bus = new Bus('letters')
+
+bus.receive('letter', msg => alert(`Hi ${msg.name}!`))
+```
+
+</td>
+</tr>
+</table>
 
 <br>
 <img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.png" width="50" alt="Pat Clifton"/>
