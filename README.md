@@ -15,9 +15,11 @@ import { Bus } from 'clifton'
 
 const bus = new Bus('pat')
 
-bus.send('letter', { name: 'Pat' })
+bus.deliver('letter', { name: 'Pat' })
 
 bus.receive('letter', (message) => {
   alert(`Hi ${message.name}!`)
 })
 ```
+
+![Pat Clifton](https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.png)
