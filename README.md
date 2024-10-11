@@ -29,7 +29,7 @@ Then start sending messages to each other:
 <td>
 
 ```js
-bus.deliver('letter', { from: 'Pat Clifton' })
+bus.deliver('letter', { from: 'Pat' })
 
 bus.receive('reply', msg => {})
 ```
@@ -40,7 +40,7 @@ bus.receive('reply', msg => {})
 ```js
 bus.receive('letter', msg => {})
 
-bus.deliver('reply', { text: 'meow' })
+bus.deliver('reply', { text: 'Meow' })
 ```
 
 </td>
