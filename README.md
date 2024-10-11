@@ -29,7 +29,7 @@ Then start sending messages to each other:
 <td>
 
 ```js
-bus.deliver('letter', { from: 'Pat' })
+bus.deliver('letter', { to: 'Jess' })
 
 bus.receive('reply', msg => {})
 ```
