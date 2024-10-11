@@ -10,7 +10,15 @@ npm install clifton
 
 ## Usage
 
-Create a `Bus` with the same name on all your pages and start sending messages to each other:
+Create a `Bus` (with the same name) on all your pages:
+
+```js
+import { Bus } from 'clifton'
+
+const bus = new Bus('letters')
+```
+
+Then start sending messages to each other
 
 <table>
 <tr>
@@ -21,22 +29,18 @@ Create a `Bus` with the same name on all your pages and start sending messages t
 <td>
 
 ```js
-import { Bus } from 'clifton'
+bus.deliver('letter', { from: 'Pat Clifton' })
 
-const bus = new Bus('letters')
-
-bus.deliver('letter', { name: 'Pat Clifton' })
+bus.receive('reply', ({ text }) => alert(text))
 ```
 
 </td>
 <td>
     
 ```js
-import { Bus } from 'clifton'
+bus.receive('letter', ({ from }) => alert(`Letter from ${from}!`))
 
-const bus = new Bus('letters')
-
-bus.receive('letter', msg => alert(`Hi ${msg.name}!`))
+bus.deliver('reply', { text: 'meow' })
 ```
 
 </td>
