@@ -31,14 +31,14 @@ Then start sending messages to each other:
 ```js
 bus.deliver('letter', { from: 'Pat Clifton' })
 
-bus.receive('reply', ({ text }) => ...)
+bus.receive('reply', msg => {})
 ```
 
 </td>
 <td>
     
 ```js
-bus.receive('letter', ({ from }) => ...)
+bus.receive('letter', msg => {})
 
 bus.deliver('reply', { text: 'meow' })
 ```
