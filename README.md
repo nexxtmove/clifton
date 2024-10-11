@@ -11,13 +11,13 @@ npm install clifton
 ## Usage
 
 ```js
-import { Bus } from "clifton";
+import { Bus } from 'clifton'
 
-const bus = new Bus("pat");
+const bus = new Bus('pat')
 
-bus.send("letter", { name: "Pat" });
+bus.send('letter', { name: 'Pat' })
 
-bus.receive("letter", (message) => {
-  alert(`Hi ${message.name}!`);
-});
+bus.receive('letter', (message) => {
+  alert(`Hi ${message.name}!`)
+})
 ```

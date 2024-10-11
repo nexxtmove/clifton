@@ -1,81 +1,81 @@
 export class Bus {
-  name;
-  handler;
-  recipients = {};
+  name
+  handler
+  recipients = {}
 
   constructor(name) {
-    this.name = name;
-    this.handler = this.handleMessageEvent.bind(this);
+    this.name = name
+    this.handler = this.handleMessageEvent.bind(this)
 
-    this.start();
+    this.start()
   }
 
   start() {
-    window.addEventListener("message", this.handler);
+    window.addEventListener('message', this.handler)
   }
 
   stop() {
-    window.removeEventListener("message", this.handler);
+    window.removeEventListener('message', this.handler)
   }
 
   handleMessageEvent(event) {
-    let data;
+    let data
 
     try {
-      data = JSON.parse(event.data);
+      data = JSON.parse(event.data)
     } catch {
-      return;
+      return
     }
 
     if (!data._clifton) {
-      return;
+      return
     }
 
     if (data._clifton.bus !== this.name) {
-      return;
+      return
     }
 
-    const subject = data._clifton.subject;
-    const callbacks = this.recipients[subject];
+    const subject = data._clifton.subject
+    const callbacks = this.recipients[subject]
 
     if (!callbacks) {
-      return;
+      return
     }
 
-    const message = data.message;
+    const message = data.message
 
     for (const callback of callbacks) {
-      callback(message);
+      callback(message)
     }
   }
 
   receive(subject, callback) {
     if (!this.recipients[subject]) {
-      this.recipients[subject] = [];
+      this.recipients[subject] = []
     }
 
-    this.recipients[subject].push(callback);
+    this.recipients[subject].push(callback)
   }
 
   deliver(subject, message = null) {
-    const iframes = window.document.querySelectorAll("iframe");
+    const iframes = window.document.querySelectorAll('iframe')
 
     for (const iframe of iframes) {
       try {
         if (!iframe.contentWindow) {
-          continue;
+          continue
         }
 
-        const bus = this.name;
+        const bus = this.name
 
         const data = {
           _clifton: { bus, subject },
-          message,
-        };
+          message
+        }
 
-        iframe.contentWindow.postMessage(JSON.stringify(data), "*");
+        iframe.contentWindow.postMessage(JSON.stringify(data), '*')
       } catch {
-        continue;
+        continue
       }
     }
   }
