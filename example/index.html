@@ -1,0 +1,13 @@
+<script type="module">
+  import { Bus } from "../clifton.js";
+
+  const bus = new Bus("example");
+
+  window.send = () => {
+    bus.deliver("hi", "Hello World!");
+  };
+</script>
+
+<iframe src="./iframe.html"></iframe>
+
+<button onclick="send()">Send message</button>
