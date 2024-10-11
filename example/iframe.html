@@ -3,5 +3,13 @@
 
   const bus = new Bus('example')
 
-  bus.receive('hi', alert)
+  bus.receive('test', (message) => {
+    console.log(`Received in child: ${message}`)
+  })
+
+  window.send = () => {
+    bus.deliver('test', 'Hello from child!')
+  }
 </script>
+
+<button onclick="send()">Send from child</button>

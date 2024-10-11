@@ -16,6 +16,10 @@ export class Bus {
   }
 
   handleMessageEvent(event) {
+    if (event.source === window) {
+      return
+    }
+
     let data
 
     try {

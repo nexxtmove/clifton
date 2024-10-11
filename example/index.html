@@ -3,11 +3,15 @@
 
   const bus = new Bus('example')
 
+  bus.receive('test', (message) => {
+    console.log(`Received in parent: ${message}`)
+  })
+
   window.send = () => {
-    bus.deliver('hi', 'Hello World!')
+    bus.deliver('test', 'Hello from parent!')
   }
 </script>
 
 <iframe src="./iframe.html"></iframe>
 
-<button onclick="send()">Send message</button>
+<button onclick="send()">Send from parent</button>
