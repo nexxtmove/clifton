@@ -18,7 +18,7 @@ import { Bus } from 'clifton'
 const bus = new Bus('letters')
 ```
 
-Then start sending messages to each other
+Then start sending messages to each other:
 
 <table>
 <tr>
@@ -38,7 +38,7 @@ bus.receive('reply', ({ text }) => alert(text))
 <td>
     
 ```js
-bus.receive('letter', ({ from }) => alert(`Letter from ${from}!`))
+bus.receive('letter', ({ from }) => alert(from))
 
 bus.deliver('reply', { text: 'meow' })
 ```
