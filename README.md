@@ -10,7 +10,7 @@ npm install clifton
 
 ## Usage
 
-Create a `Bus` (with the same name) on all your pages:
+🚚 Create a `Bus` on all your pages:
 
 ```js
 import { Bus } from 'clifton'
@@ -18,7 +18,7 @@ import { Bus } from 'clifton'
 const bus = new Bus('letters')
 ```
 
-Then start sending messages to each other:
+📨 Then start delivering messages:
 
 <table>
 <tr>
