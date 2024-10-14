@@ -1,7 +1,15 @@
 {
   "name": "clifton",
-  "version": "0.4.0",
-  "description": "Cross-origin message bus",
+  "description": "Easy-to-use messaging between iframes and their parent",
+  "version": "0.4.1",
+  "author": "Nexxtmove <tech@nexxtmove.nl> (https://nexxtmove.nl)",
   "license": "MIT",
-  "main": "clifton.js"
+  "main": "clifton.js",
+  "homepage": "https://github.com/nexxtmove/clifton",
+  "keywords": [
+    "iframe",
+    "messaging",
+    "communication",
+    "postMessage"
+  ]
 }
