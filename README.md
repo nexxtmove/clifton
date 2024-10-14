@@ -1,8 +1,10 @@
 # 📬 Clifton
 
-Easy-to-use messaging between iframes and their parent.
+Never miss a delivery between your iframes again! Clifton is your friendly neighborhood message service, ensuring your messages arrive safe and sound, no matter the weather.
 
 ## Install
+
+🚏 Get on the road by installing clifton:
 
 ```bash
 npm install clifton
