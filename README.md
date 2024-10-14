@@ -6,7 +6,7 @@ Never miss a delivery between your iframes again! Clifton is your friendly neigh
 
 ## Install
 
-🚏 Get on the road by installing clifton:
+📦 Get on the road by installing clifton:
 
 ```bash
 npm install clifton
