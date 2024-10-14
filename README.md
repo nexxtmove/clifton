@@ -1,5 +1,7 @@
 # 📬 Clifton
 
+<img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.gif" width="175" alt="Pat Clifton"/>
+
 Never miss a delivery between your iframes again! Clifton is your friendly neighborhood message service, ensuring your messages arrive safe and sound, no matter the weather.
 
 ## Install
@@ -48,6 +50,3 @@ bus.receive('letter', msg => {
 </td>
 </tr>
 </table>
-
-<br>
-<img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.gif" width="175" alt="Pat Clifton"/>
