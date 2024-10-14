@@ -50,4 +50,4 @@ bus.receive('letter', msg => {
 </table>
 
 <br>
-<img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.gif" width="150" alt="Pat Clifton"/>
+<img src="https://raw.githubusercontent.com/nexxtmove/clifton/pat/pat.gif" width="200" alt="Pat Clifton"/>
