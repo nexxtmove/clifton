@@ -38,9 +38,9 @@ bus.receive('reply', msg => {})
 <td>
     
 ```js
-bus.receive('letter', msg => {})
-
-bus.deliver('reply', { text: 'Meow' })
+bus.receive('letter', msg => {
+  bus.deliver('reply', { text: 'Meow' })
+})
 ```
 
 </td>
