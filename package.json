@@ -1,7 +1,7 @@
 {
   "name": "clifton",
   "description": "Easy-to-use messaging between iframes and their parent",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "author": "Nexxtmove <tech@nexxtmove.nl> (https://nexxtmove.nl)",
   "license": "MIT",
   "main": "clifton.js",
