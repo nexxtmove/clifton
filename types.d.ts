@@ -1,4 +1,3 @@
-// bus.d.ts
 export declare class Bus {
     name: any
     handler: any
