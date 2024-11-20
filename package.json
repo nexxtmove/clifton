@@ -5,6 +5,7 @@
   "author": "Nexxtmove <tech@nexxtmove.nl> (https://nexxtmove.nl)",
   "license": "MIT",
   "main": "clifton.js",
+  "types": "types.d.ts",
   "homepage": "https://github.com/nexxtmove/clifton",
   "keywords": [
     "iframe",
